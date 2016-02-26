@@ -1,0 +1,50 @@
+2016-02-22 13:05:52  [ main:0 ] - [ INFO ]  [start referToken
+]2016-02-22 13:05:53  [ main:357 ] - [ DEBUG ]  [CookieSpec selected: default
+]2016-02-22 13:05:53  [ main:367 ] - [ DEBUG ]  [Auth cache not set in the context
+]2016-02-22 13:05:53  [ main:368 ] - [ DEBUG ]  [Connection request: [route: {s}->https://api.weixin.qq.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+]2016-02-22 13:05:53  [ main:382 ] - [ DEBUG ]  [Connection leased: [id: 0][route: {s}->https://api.weixin.qq.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+]2016-02-22 13:05:53  [ main:384 ] - [ DEBUG ]  [Opening connection {s}->https://api.weixin.qq.com:443
+]2016-02-22 13:05:53  [ main:412 ] - [ DEBUG ]  [Connecting to api.weixin.qq.com/101.227.131.103:443
+]2016-02-22 13:05:53  [ main:412 ] - [ DEBUG ]  [Connecting socket to api.weixin.qq.com/101.227.131.103:443 with timeout 2000
+]2016-02-22 13:05:53  [ main:603 ] - [ DEBUG ]  [Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+]2016-02-22 13:05:53  [ main:604 ] - [ DEBUG ]  [Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_RC4_128_SHA, TLS_ECDHE_RSA_WITH_RC4_128_SHA, SSL_RSA_WITH_RC4_128_SHA, TLS_ECDH_ECDSA_WITH_RC4_128_SHA, TLS_ECDH_RSA_WITH_RC4_128_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_RC4_128_MD5, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+]2016-02-22 13:05:53  [ main:604 ] - [ DEBUG ]  [Starting handshake
+]2016-02-22 13:05:53  [ main:732 ] - [ DEBUG ]  [Secure session established
+]2016-02-22 13:05:53  [ main:732 ] - [ DEBUG ]  [ negotiated protocol: TLSv1.2
+]2016-02-22 13:05:53  [ main:732 ] - [ DEBUG ]  [ negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+]2016-02-22 13:05:53  [ main:733 ] - [ DEBUG ]  [ peer principal: CN=mp.weixin.qq.com, OU=R&D, O=Shenzhen Tencent Computer Systems Company Limited, L=Shenzhen, ST=Guangdong, C=CN
+]2016-02-22 13:05:53  [ main:733 ] - [ DEBUG ]  [ peer alternative names: [mp.weixinbridge.com, long.open.weixin.qq.com, a.weixin.qq.com, hk.mp.weixin.qq.com, sz.mp.weixin.qq.com, api.weixin.qq.com, game.weixin.qq.com, sz.api.weixin.qq.com, open.weixin.qq.com, hk.api.weixin.qq.com, sz.open.weixin.qq.com, hk.open.weixin.qq.com, mp.weixin.qq.com]
+]2016-02-22 13:05:53  [ main:734 ] - [ DEBUG ]  [ issuer principal: CN=GeoTrust SSL CA - G3, O=GeoTrust Inc., C=US
+]2016-02-22 13:05:53  [ main:737 ] - [ DEBUG ]  [Connection established 192.168.141.96:9205<->101.227.131.103:443
+]2016-02-22 13:05:53  [ main:738 ] - [ DEBUG ]  [http-outgoing-0: set socket timeout to 2000
+]2016-02-22 13:05:53  [ main:738 ] - [ DEBUG ]  [Executing request GET /cgi-bin/token?grant_type=client_credential&appid=&secret= HTTP/1.1
+]2016-02-22 13:05:53  [ main:738 ] - [ DEBUG ]  [Target auth state: UNCHALLENGED
+]2016-02-22 13:05:53  [ main:739 ] - [ DEBUG ]  [Proxy auth state: UNCHALLENGED
+]2016-02-22 13:05:53  [ main:741 ] - [ DEBUG ]  [http-outgoing-0 >> GET /cgi-bin/token?grant_type=client_credential&appid=&secret= HTTP/1.1
+]2016-02-22 13:05:53  [ main:742 ] - [ DEBUG ]  [http-outgoing-0 >> Host: api.weixin.qq.com
+]2016-02-22 13:05:53  [ main:742 ] - [ DEBUG ]  [http-outgoing-0 >> Connection: Keep-Alive
+]2016-02-22 13:05:53  [ main:742 ] - [ DEBUG ]  [http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_11)
+]2016-02-22 13:05:53  [ main:743 ] - [ DEBUG ]  [http-outgoing-0 >> Accept-Encoding: gzip,deflate
+]2016-02-22 13:05:53  [ main:743 ] - [ DEBUG ]  [http-outgoing-0 >> "GET /cgi-bin/token?grant_type=client_credential&appid=&secret= HTTP/1.1[\r][\n]"
+]2016-02-22 13:05:53  [ main:743 ] - [ DEBUG ]  [http-outgoing-0 >> "Host: api.weixin.qq.com[\r][\n]"
+]2016-02-22 13:05:53  [ main:744 ] - [ DEBUG ]  [http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+]2016-02-22 13:05:53  [ main:744 ] - [ DEBUG ]  [http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_11)[\r][\n]"
+]2016-02-22 13:05:53  [ main:744 ] - [ DEBUG ]  [http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+]2016-02-22 13:05:53  [ main:745 ] - [ DEBUG ]  [http-outgoing-0 >> "[\r][\n]"
+]2016-02-22 13:05:53  [ main:786 ] - [ DEBUG ]  [http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+]2016-02-22 13:05:53  [ main:787 ] - [ DEBUG ]  [http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+]2016-02-22 13:05:53  [ main:787 ] - [ DEBUG ]  [http-outgoing-0 << "Content-Type: application/json; encoding=utf-8[\r][\n]"
+]2016-02-22 13:05:53  [ main:787 ] - [ DEBUG ]  [http-outgoing-0 << "Date: Mon, 22 Feb 2016 05:07:49 GMT[\r][\n]"
+]2016-02-22 13:05:53  [ main:788 ] - [ DEBUG ]  [http-outgoing-0 << "Content-Length: 65[\r][\n]"
+]2016-02-22 13:05:53  [ main:788 ] - [ DEBUG ]  [http-outgoing-0 << "[\r][\n]"
+]2016-02-22 13:05:53  [ main:788 ] - [ DEBUG ]  [http-outgoing-0 << "{"errcode":41002,"errmsg":"appid missing hint: [B05zAa0669vr21]"}"
+]2016-02-22 13:05:53  [ main:792 ] - [ DEBUG ]  [http-outgoing-0 << HTTP/1.1 200 OK
+]2016-02-22 13:05:53  [ main:793 ] - [ DEBUG ]  [http-outgoing-0 << Connection: keep-alive
+]2016-02-22 13:05:53  [ main:793 ] - [ DEBUG ]  [http-outgoing-0 << Content-Type: application/json; encoding=utf-8
+]2016-02-22 13:05:53  [ main:793 ] - [ DEBUG ]  [http-outgoing-0 << Date: Mon, 22 Feb 2016 05:07:49 GMT
+]2016-02-22 13:05:53  [ main:793 ] - [ DEBUG ]  [http-outgoing-0 << Content-Length: 65
+]2016-02-22 13:05:53  [ main:800 ] - [ DEBUG ]  [Connection can be kept alive indefinitely
+]2016-02-22 13:05:53  [ main:807 ] - [ DEBUG ]  [Connection [id: 0][route: {s}->https://api.weixin.qq.com:443] can be kept alive indefinitely
+]2016-02-22 13:05:53  [ main:809 ] - [ DEBUG ]  [Connection released: [id: 0][route: {s}->https://api.weixin.qq.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+]2016-02-22 13:05:53  [ main:1016 ] - [ INFO ]  [ init token timer
+]

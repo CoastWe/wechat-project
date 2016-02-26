@@ -1,0 +1,7 @@
+2016-02-19 14:26:16  [ main:0 ] - [ ERROR ]  [javax.xml.bind.UnmarshalException
+ - with linked exception:
+[Exception [EclipseLink-25004] (Eclipse Persistence Services - 2.5.2.v20131113-a7346c6): org.eclipse.persistence.exceptions.XMLMarshalException
+Exception Description: An error occurred unmarshalling the document
+Internal Exception: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,533]
+Message: 元素类型 "MsgType" 必须由匹配的结束标记 "</MsgType>" 终止。]
+]
