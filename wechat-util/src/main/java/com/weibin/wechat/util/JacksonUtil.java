@@ -14,6 +14,9 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.ser.FilterProvider;
+import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
+import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 
 public class JacksonUtil {
@@ -143,6 +146,22 @@ public class JacksonUtil {
 	public void enableEnumUseToString() {
 		mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
 		mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
+	}
+	
+	/**
+	 * 设定使用jsonFilter.
+	 */
+	public void enableFilter(String filterName,String[] rule) {
+		FilterProvider filter = new SimpleFilterProvider().addFilter(filterName, SimpleBeanPropertyFilter.filterOutAllExcept(rule));
+		mapper.setFilterProvider(filter);
+	}
+	
+	/**
+	 * 设定使用jsonFilter.
+	 */
+	public void enableRoot(boolean deserialization,boolean serialization) {
+		mapper.configure(DeserializationFeature.UNWRAP_ROOT_VALUE, deserialization);
+		mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, serialization);
 	}
 
 	/**

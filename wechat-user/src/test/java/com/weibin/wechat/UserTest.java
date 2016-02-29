@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.weibin.wechat.user.dto.WeixinGroupMixIn;
@@ -21,19 +23,25 @@ public class UserTest {
 	
 	private WeixinGroup group;
 	private String xml;
+	private String xml1;
 	@Before
 	public void before(){
 		group = new WeixinGroup();
 		group.setName("nickname");
 		group.setId(1);
-		xml ="{\"group\":{\"name\":\"test\"}}";
+		group.setCount(1);
+		xml ="{\"groups\": {\"id\": 107, \"name\": \"test\"}}";
 	}
 	@Test
 	public void test() throws IOException{
-		ObjectMapper mapper = JacksonUtil.nonEmptyMapper().getMapper();
-		mapper.addMixIn(WeixinGroup.class, WeixinGroupMixIn.class);
-		mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, true);
-		System.out.println(mapper.writeValueAsString(group));
+		JacksonUtil mapper = JacksonUtil.nonDefaultMapper();
+		JsonNode node = mapper.fromJson(xml, JsonNode.class);
+		
+		System.out.println(node.toString());
+//		mapper.enableFilter("groupFilter", new String[]{"name"});
+//		mapper.getMapper().addMixIn(WeixinGroup.class, WeixinGroupMixIn.class);
+//		System.out.println(mapper.toJson(group));
+//		System.out.println(mapper.fromJson(xml, WeixinGroup.class));
 	}
 
 }
